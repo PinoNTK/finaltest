@@ -20,7 +20,7 @@ public class ChooseTime implements Interaction {
     }
 
 
-    @Step("{0} books a room from #startingDate to #endingDate")
+    @Step("{0} wants to book a tour from #startingDate to #endingDate")
     public <T extends Actor> void performAs(T actor) {
         Target STARTING_DATE = Target.the("starting date")
                 .located(By.cssSelector("td[data-date=\"" + this.startingDate + "\"]"));

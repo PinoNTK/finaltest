@@ -12,14 +12,15 @@ public class SearchResultQuestion implements Question<Integer> {
     public static Question<Integer> numberOfResultsFound(){
         return new SearchResultQuestion();
     }
-
-    @Step("{0} see #foundNumber rooms matched with destination in the list of result")
+    private int totalFound;
+    @Step("{0} see #totalFound rooms matched with destination in the list of result")
     public Integer answeredBy(Actor actor) {
         String searchingResult = SearchingResult.SEARCHING_RESULT.resolveFor(actor).getText();
         final Pattern pattern = Pattern.compile("[0-9]+", Pattern.MULTILINE);
         final Matcher matcher = pattern.matcher(searchingResult);
         if (matcher.find()) {
-            return Integer.parseInt(matcher.group());
+            totalFound = Integer.parseInt(matcher.group());
+            return totalFound;
         }
         return 0;
     }

@@ -22,7 +22,7 @@ public class ChooseCapacities implements Interaction {
         return new ChooseCapacitiesBuilder(adultNumber);
     }
 
-    @Step("{0} books #roomNumber rooms for #adultNumber adults and #childrenNumber children")
+    @Step("{0} wants to book #roomNumber rooms for #adultNumber adults and #childrenNumber children")
     public <T extends Actor> void performAs(T actor) {
         CapacitiesBox.CAPACITIES_BOX.resolveFor(actor).click();
         // increase adult number
