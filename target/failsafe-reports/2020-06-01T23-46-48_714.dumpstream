@@ -1,0 +1,18 @@
+# Created at 2020-06-01T23:46:49.535
+Picked up _JAVA_OPTIONS: -Djava.net.preferIPv4Stack=true
+
+# Created at 2020-06-01T23:46:50.573
+WARNING: An illegal reflective access operation has occurred
+
+# Created at 2020-06-01T23:46:50.574
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/C:/Users/kien6/.m2/repository/com/google/inject/guice/4.2.2/guice-4.2.2.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+
+# Created at 2020-06-01T23:46:50.574
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+
+# Created at 2020-06-01T23:46:50.575
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+
+# Created at 2020-06-01T23:46:50.575
+WARNING: All illegal access operations will be denied in a future release
+
