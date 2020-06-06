@@ -23,12 +23,17 @@ pipeline{
             }
     }
 
-    stage ('Cucumber Reports') {
+    stage ('Senerity Reports') {
 
         steps {
-            cucumber buildStatus: "UNSTABLE",
-                fileIncludePattern: "**/cucumber.json",
-                jsonReportDirectory: 'target'
+            publishHTML(target: [
+            reportName : 'Serenity',
+            reportDir:   'target/site/serenity',
+            reportFiles: 'index.html',
+            keepAll:     true,
+            alwaysLinkToLastBuild: true,
+            allowMissing: false
+        ])
 
         }
 
